@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58
+class ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -429,6 +429,7 @@ class ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
+        'App\\Http\\Controllers\\ProjectTasksController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProjectTasksController.php',
         'App\\Http\\Controllers\\ProjectsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProjectsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -2880,6 +2881,7 @@ class ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58
         'PhpParser\\Node\\Expr\\AssignOp\\BitwiseAnd' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/BitwiseAnd.php',
         'PhpParser\\Node\\Expr\\AssignOp\\BitwiseOr' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/BitwiseOr.php',
         'PhpParser\\Node\\Expr\\AssignOp\\BitwiseXor' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/BitwiseXor.php',
+        'PhpParser\\Node\\Expr\\AssignOp\\Coalesce' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Coalesce.php',
         'PhpParser\\Node\\Expr\\AssignOp\\Concat' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Concat.php',
         'PhpParser\\Node\\Expr\\AssignOp\\Div' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Div.php',
         'PhpParser\\Node\\Expr\\AssignOp\\Minus' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Minus.php',
@@ -4181,11 +4183,11 @@ class ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitdeda1bdf07eaddd0abea8ab639a5da58::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01::$classMap;
 
         }, null, ClassLoader::class);
     }
