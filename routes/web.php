@@ -11,7 +11,20 @@
 |
 */
 
+
 // GET Requests
+// Route::get('/' , function() {
+//    dd(app('App\Example'));
+// });
+use App\Services\Twitter;
+
+Route::get('/example', function(Twitter $twitter){
+    dd($twitter);
+});
+
+// app()->singleton('App\Services\Twitter', function(){
+//     return new \App\Services\Twitter('asdasdasd');
+// });
 
 Route::get('/', 'PagesController@home');
 
