@@ -21,19 +21,8 @@
 <div class="form-group">
 <button class="btn btn-primary" type="submit" >Update Project</button>
 </div>
-
-@if($errors->any())
-<div class="container alert alert-danger"  role="alert">
-<ul>
-@foreach($errors->all() as $error)
-<li>{{ $error }}</li>
-@endforeach
-</ul>
-</div>
-@endif
-
 </form>
-
+@include('errors')
 <form method="POST" action="/projects/{{ $project->id }}" >
 @method('DELETE')
 @csrf
