@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use Illuminate\Http\Request;
+use App\Mail\ProjectCreated;
 
 class ProjectsController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::where('owner_id', auth()->id())->get();
 
         return view('projects.index', compact('projects'));
     }
@@ -43,7 +48,13 @@ class ProjectsController extends Controller
            'description'=>['required','min:3']
        ]); 
 
-        project::create($attributes);
+       $attributes['owner_id'] = auth()->id();
+
+       $project=  project::create($attributes);
+
+        \Mail::to('joelimalive1994@gmail.com')->send(
+            new ProjectCreated($project)
+        );
 
         return redirect('/projects');
 
@@ -57,6 +68,12 @@ class ProjectsController extends Controller
      */
     public function show(Project $project)
     {
+       // abort_unless(auth()->user()->owns($project),403);
+
+        // abort_if($project->owner_id !== auth()->id(), 403);
+
+        $this->authorize('update', $project);
+
         return view('projects.show', compact('project'));
     }
 
