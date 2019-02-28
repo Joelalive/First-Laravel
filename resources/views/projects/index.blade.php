@@ -9,7 +9,6 @@
 <div class="container pt-4">
 <div class="row">
 <h1>Projects</h1>
-
 </div>
 </div>
 @foreach($projects as $project)
@@ -19,5 +18,9 @@
 </ul>
 </div>
 @endforeach
+
+@include('flash')
+
+
 
 @endsection

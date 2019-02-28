@@ -30,6 +30,7 @@ class ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -431,6 +432,7 @@ class ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Events\\ProjectCreated' => __DIR__ . '/../..' . '/app/Events/ProjectCreated.php',
         'App\\Example' => __DIR__ . '/../..' . '/app/Example.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -452,6 +454,8 @@ class ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Listeners\\SendProjectCreatedNotification' => __DIR__ . '/../..' . '/app/Listeners/SendProjectCreatedNotification.php',
+        'App\\Mail\\ProjectCreated' => __DIR__ . '/../..' . '/app/Mail/ProjectCreated.php',
         'App\\Policies\\ProjectPolicy' => __DIR__ . '/../..' . '/app/Policies/ProjectPolicy.php',
         'App\\Project' => __DIR__ . '/../..' . '/app/Project.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -460,6 +464,7 @@ class ComposerStaticInit4f63e2b7e4fe872cbddbad9b3ffa4e01
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Providers\\SocialServiceProvider' => __DIR__ . '/../..' . '/app/Providers/SocialServiceProvider.php',
+        'App\\Providers\\TelescopeServiceProvider' => __DIR__ . '/../..' . '/app/Providers/TelescopeServiceProvider.php',
         'App\\Services\\Twitter' => __DIR__ . '/../..' . '/app/Services/Twitter.php',
         'App\\Task' => __DIR__ . '/../..' . '/app/Task.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',

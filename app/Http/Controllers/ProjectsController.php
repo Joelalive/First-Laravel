@@ -10,6 +10,14 @@ use App\Events\ProjectCreated;
 class ProjectsController extends Controller
 {
 
+    protected function validateProject(){
+        return request()->validate([
+            'title'=>['required','min:3'],
+            'description'=>['required','min:3']
+        ]); 
+    }
+    
+
     public function __construct(){
         $this->middleware('auth');
     }
@@ -50,6 +58,8 @@ class ProjectsController extends Controller
        $attributes['owner_id'] = auth()->id();
 
         $project = project::create($attributes);
+
+        flash('Your project has been created!.');
 
         return redirect('/projects');
 
@@ -108,13 +118,10 @@ class ProjectsController extends Controller
     {
         $project->delete();
 
+        flash('Your project has been Deleted!.');
+
         return redirect('/projects');
     }
 
-    protected function validateProject(){
-        return request()->validate([
-            'title'=>['required','min:3'],
-            'description'=>['required','min:3']
-        ]); 
-    }
+
 }

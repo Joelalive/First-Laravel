@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Events\\ProjectCreated' => $baseDir . '/app/Events/ProjectCreated.php',
     'App\\Example' => $baseDir . '/app/Example.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -28,6 +29,8 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Listeners\\SendProjectCreatedNotification' => $baseDir . '/app/Listeners/SendProjectCreatedNotification.php',
+    'App\\Mail\\ProjectCreated' => $baseDir . '/app/Mail/ProjectCreated.php',
     'App\\Policies\\ProjectPolicy' => $baseDir . '/app/Policies/ProjectPolicy.php',
     'App\\Project' => $baseDir . '/app/Project.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
@@ -36,6 +39,7 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Providers\\SocialServiceProvider' => $baseDir . '/app/Providers/SocialServiceProvider.php',
+    'App\\Providers\\TelescopeServiceProvider' => $baseDir . '/app/Providers/TelescopeServiceProvider.php',
     'App\\Services\\Twitter' => $baseDir . '/app/Services/Twitter.php',
     'App\\Task' => $baseDir . '/app/Task.php',
     'App\\User' => $baseDir . '/app/User.php',
